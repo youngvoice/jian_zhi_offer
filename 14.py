@@ -96,5 +96,7 @@ class Solution:
             while n >= 5:
                 sum = 3*sum
                 n = n - 3
-            sum += product[n]
+                
+            sum = sum*product[n]
         return sum
+
