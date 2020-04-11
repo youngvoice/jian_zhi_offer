@@ -49,6 +49,7 @@ class Solution:
         return product[n]
 '''
 
+'''
 class Solution:
     def cuttingRope(self, n: int) -> int:
         product = [1,1]
@@ -77,3 +78,23 @@ class Solution:
             if mul > max:
                 max = mul
         return max
+
+'''
+
+class Solution:
+    def cuttingRope(self, n: int) -> int:
+        product = [0, 1, 2, 3, 4]
+        if n < 5:
+            if n == 2:
+                return 1
+            elif n == 3:
+                return 2
+            else:
+                return 4
+        else:
+            sum = 1
+            while n >= 5:
+                sum = 3*sum
+                n = n - 3
+            sum += product[n]
+        return sum
